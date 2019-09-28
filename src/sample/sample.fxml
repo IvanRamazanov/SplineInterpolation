@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="347.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <ButtonBar BorderPane.alignment="CENTER">
+         <buttons>
+            <Button fx:id="btnOpenFile" mnemonicParsing="false" onAction="#openFile" text="Open File" />
+            <Button mnemonicParsing="false" onAction="#interpolate" text="Interpolate" />
+         </buttons>
+      </ButtonBar>
+   </top>
+   <bottom>
+      <TextField fx:id="searchBar" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+         <items>
+            <ScrollPane fx:id="buttonScrollPane" prefHeight="300.0" prefWidth="150.0">
+               <content>
+                  <VBox fx:id="objectArray" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="contentArea" prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>
